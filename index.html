@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <h1 class="display-3"> Weather Weappon </h1>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <!--searchBar and Search history container-->
+            <div class="col-4 ml-10">
+                <!--searchBar-->
+                <div class="row">
+                    <h2 class="row">Search for a City</h2>
+                    <textarea id="cityName"></textarea>
+                    <button type="button" id="search" class="btn btn-primary">Search for city</button>
+                </div>
+                <ui id="previous" class="col-md-4">
+                    <button id="placeholder" class="row placeholder">Place holder</button>
+                    <button id="placeholder" class="row placeholder">Place holder</button>
+                    <button id="placeholder" class="row placeholder">Place holder</button>
+                    <button id="placeholder" class="row placeholder">Place holder</button>
+                    <button id="placeholder" class="row placeholder">Place holder</button>
+                    <button id="placeholder" class="row placeholder">Place holder</button>
+                    </ul>
+
+
+            </div>
+            <!--weather display and 5-day container-->
+            <div class="col-8">
+                <!--Current local weather -->
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 id="city">Your Local Weather</h2>
+                            <img id="icon1"></img>
+                            <h3 id="temp1">Temp:</h3>
+                            <h3 id="wind1">Wind:</h3>
+                            <h3 id="humidity1">Humidity:</h3>
+                        </div>
+                    </div>
+
+                </div>
+                <!--5-day breakdown-->
+                <div id="five-day-section" class="row row-cols-1 row-col-md-5 g-4">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
