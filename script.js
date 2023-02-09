@@ -3,12 +3,14 @@ $(function () {
 $("#currentDay").text(day.format("DD MMM YYYY")+"   "+day.format("HH:mmA"));
   console.log((day.format("DD MMM YYYY")+"   "+day.format("HH:mmA")));
   $('#search').click(function () {
+    
     var buttonHtml = `<button id="placeholder" class="row placeholder">`+$('#cityName').val()+`</button>`;
     $("#previous").prepend(buttonHtml);
     $("#previous").children().eq(0).click(function(){
       populate(this.textContent);
     })
     populate($('#cityName').val());
+    $("#cityName").val("");
   });
 
 });
