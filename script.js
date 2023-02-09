@@ -1,5 +1,7 @@
 $(function () {
-  console.log("Hi!");
+  var day = dayjs();
+$("#currentDay").text(day.format("DD MMM YYYY")+"   "+day.format("HH:mmA"));
+  console.log((day.format("DD MMM YYYY")+"   "+day.format("HH:mmA")));
   $('#search').click(function () {
     var buttonHtml = `<button id="placeholder" class="row placeholder">`+$('#cityName').val()+`</button>`;
     $("#previous").prepend(buttonHtml);
@@ -38,15 +40,19 @@ function showFiveDayCard(data) {
   $("#temp1").html("Temp: "+convertK(data.list[0].main.temp));
   $("#wind1").html("Wind: "+data.list[0].wind.speed);
   $("#humidity1").html("Humidity: "+data.list[0].main.humidity);
+  console.log ("Assets/"+data.list[0].weather[0].icon+".png");
+  $("#icon1").attr("src","Assets/"+data.list[0].weather[0].icon+".png");
   for (var i = 7; i < data.list.length; i += 8) {
     var currentDay = data.list[i];
-    console.log(currentDay);
+    var icon = ("Assets/"+data.list[i].weather[0].icon+".png");
+   // console.log(day.add(((i+1)/8),'day').format("DD MMM YYYY")+);
     cardHTML +=
 
       `<div class="col">    
         <div class="card">
           <div class="card-body">
-            <img id="icon1"></img>
+            <p>`+dayjs().add(((i+1)/8),'day').format("DD MMM YYYY")+`</p>
+            <img id="icon" src=`+icon+` height=40px width=40px>  </img>
             <p>Temp: ${convertK(currentDay.main.temp)}</p>
             <p>Wind: ${currentDay.wind.speed}</p>
             <p>Humidity: ${currentDay.main.humidity}</p>
