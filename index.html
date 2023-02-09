@@ -16,12 +16,13 @@
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
             <h1 class="display-3"> Weather Weappon </h1>
+            <h2 id="currentDay"></h2>
         </div>
     </nav>
     <div class="container">
         <div class="row">
             <!--searchBar and Search history container-->
-            <div class="col-4 ml-10">
+            <div class="col-4 float-left">
                 <!--searchBar-->
                 <div class="row">
                     <h2 class="row">Search for a City</h2>
@@ -30,11 +31,7 @@
                 </div>
                 <ui id="previous" class="col-md-4">
                     <button id="placeholder" class="row placeholder"></button>
-                    <button id="placeholder" class="row placeholder"></button>
-                    <button id="placeholder" class="row placeholder"></button>
-                    <button id="placeholder" class="row placeholder"></button>
-                    <button id="placeholder" class="row placeholder"></button>
-                    <button id="placeholder" class="row placeholder"></button>
+                    
                     </ul>
 
 
@@ -42,11 +39,11 @@
             <!--weather display and 5-day container-->
             <div class="col-8">
                 <!--Current local weather -->
-                <div class="col-12">
-                    <div class="card">
+                <div class="col-12 mb-5">
+                    <div class="day1">
                         <div class="card-body">
                             <h2 id="city">Your Local Weather</h2>
-                            <img id="icon1"></img>
+                            <img id="icon1" src="" height=auto width=auto></img>
                             <h3 id="temp1">Temp:</h3>
                             <h3 id="wind1">Wind:</h3>
                             <h3 id="humidity1">Humidity:</h3>
@@ -55,14 +52,18 @@
 
                 </div>
                 <!--5-day breakdown-->
-                <div id="five-day-section" class="row row-cols-1 row-col-md-5 g-4">
+                <div id="five-day-section" class="row  row-col-md-5 g-4">
                 </div>
 
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+    crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="script.js"></script>
+
 </body>
 
 </html>

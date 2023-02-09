@@ -1,8 +1,13 @@
 .placeholder{
     background-color: rgb(10, 10, 209);
-    color: rgb(251, 248, 248);
+    color: rgb(241, 220, 220);
     height: 40px;
     width: 100%;
     margin-top: 6px;
  
+}
+.card{
+    width: 20%;
+    min-width: 150px;
+    margin: 1;
 }
