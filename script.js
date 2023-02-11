@@ -15,7 +15,7 @@ $("#currentDay").text(day.format("DD MMM YYYY")+"   "+day.format("HH:mmA"));
 
 });
 function populate(city) {
-  var url = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=6c5919017f7f040f339300addaf119d4"
+  var url = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=6c5919017f7f040f339300addaf119d4"
   fetch(url)
     .then(function (response) {
       if (response.status === 404) {
