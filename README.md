@@ -1,4 +1,4 @@
-# WeatherWappon
+# WeatherWeappon
 Always Be prepared with this API powered weather app weapon in you kit that keeps you up to date with the latest weather. 
 
 GIVEN a weather dashboard with form inputs
